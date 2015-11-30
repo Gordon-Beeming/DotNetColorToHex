@@ -62,8 +62,8 @@
       System.Drawing.Color colorValue = (System.Drawing.Color)color.GetValue(new System.Drawing.Color());
         string hexValue = colorValue.ToArgb().ToString("X8").Substring(2, 6);
         <tr>
-          <td>System.Drawing.Color.@color.Name</td>
-          <td># @hexValue</td>
+          <td><a id="Color-@(color.Name)" href="#Color-@(color.Name)">System.Drawing.Color.@(color.Name)</a></td>
+          <td><a id="Hex-@(hexValue)" href="#Hex-@(hexValue)"># @(hexValue)</a></td>
           <td align="center" valign="middle" style="background-color:#@(hexValue);">&nbsp;</td>
         </tr>
 
