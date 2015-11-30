@@ -22,6 +22,25 @@
     table td {
       text-align:left;
     }
+    .github{
+      position:fixed;
+      top:0;
+      right:0;
+      width:340px;
+      border-bottom:solid 1px #808080;
+      border-left:solid 1px #808080;
+      background-color:white;
+      padding:0;
+    }
+    .github iframe{
+      margin:5px;
+    }
+    .github span{
+      position:absolute;
+      left:235px;
+      bottom:10px;
+      font-size:10px;
+    }
   </style>
 </head>
 <body>
@@ -53,6 +72,20 @@
   </table>
 
   <center>&copy; @(DateTime.Now.Year) Gordon Beeming</center>
+
+  <div class="github">
+    <iframe src="https://ghbtns.com/github-btn.html?user=Gordon-Beeming&repo=DotNetColorToHex&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+
+    <iframe src="https://ghbtns.com/github-btn.html?user=Gordon-Beeming&repo=DotNetColorToHex&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+
+    <iframe src="https://ghbtns.com/github-btn.html?user=Gordon-Beeming&repo=DotNetColorToHex&type=fork&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+
+    <br />
+
+    <iframe src="https://ghbtns.com/github-btn.html?user=Gordon-Beeming&type=follow&count=true" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
+
+    <span>powered by<br /><a href="https://ghbtns.com/" target="_blank">ghbtns.com</a></span>
+  </div>
 
 </body>
 </html>
