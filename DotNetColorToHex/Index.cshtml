@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+    body {
+      font-family:'Segoe UI Light', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color:#111111;
+    }
+    table {
+      border-top: solid 1px #808080;
+      border-left: solid 1px #808080;
+    }
+    table th, table td {
+      text-align:left;
+      border-right: solid 1px #808080;
+      border-bottom: solid 1px #808080;
+    }
+    table th {
+      font-weight:bold;
+    }
+    table td {
+      text-align:left;
+    }
+  </style>
+</head>
+<body>
+  <table cellpadding="3" cellspacing="0">
+    <tr>
+      <th>Color</th>
+      <th>Hex</th>
+      <th>Sample</th>
+    </tr>
+
+    @foreach (var color in typeof(System.Drawing.Color).GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.GetProperty))
+    {
+      System.Drawing.Color colorValue = (System.Drawing.Color)color.GetValue(new System.Drawing.Color());
+        string hexValue = colorValue.ToArgb().ToString("X8").Substring(2, 6);
+        <tr>
+          <td>System.Drawing.Color.@color.Name</td>
+          <td># @hexValue</td>
+          <td align="center" valign="middle" style="background-color:#@(hexValue);">&nbsp;</td>
+        </tr>
+
+    }
+
+  </table>
+
+</body>
+</html>
